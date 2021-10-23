@@ -13,7 +13,7 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
       case startPage:
-      return MaterialPageRoute(builder: (_)=>const StartPage());
+      return MaterialPageRoute(builder: (_)=>LoginPage(title: "Toward Decentralized World",));
       case homePage:
         return MaterialPageRoute(builder: (_)=>const HomePage());
       case detailPage:

@@ -47,19 +47,7 @@ class GreetingWidget extends StatelessWidget {
                         foreground: Paint()..shader = linearGradient),
                   ),
                 SizedBox(width: 10,),
-                  // Text.rich(
-                  //   TextSpan(
-                  //     text: 'Hello',
-                  //     children: [
-                  //       TextSpan(
-                  //           text: ' ${"divyam".split(' ').first}',
-                  //           style: TextStyle(fontWeight: FontWeight.bold)),
-                  //     ],
-                  //   ),
-                  //   style: TextStyle(
-                  //     fontSize: 30,
-                  //   ),
-                  // ),
+
                   const Spacer(),
                     InkWell(
                      onTap: (){
@@ -95,7 +83,7 @@ class GreetingWidget extends StatelessWidget {
               const Center(
                 child: Padding(
                   padding: EdgeInsets.all(2.0),
-                  child: SpaceLetter(name: 'DIVYAM',fontsize: 14,width: 200,height: 30,
+                  child: SpaceLetter(name: 'Apurv',fontsize: 14,width: 200,height: 30,
                   opacity: 0.4,iconsize: 20,),
                 ),
               ),
