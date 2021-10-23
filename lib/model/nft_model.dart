@@ -32,7 +32,7 @@ class NftModel{
      video: false,
    ),
    NftModel(
-       userName: "Divyam",
+       userName: "Apurv",
        price: 1.1,
        nftImage: "https://cdn.dribbble.com/users/43342/screenshots/14595369/media/478448af7ceac18b147b5f488cf9b475.jpg?compress=1&resize=1600x1200",
        buttonType: "Buy now",

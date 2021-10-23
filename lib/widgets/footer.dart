@@ -53,7 +53,7 @@ class Footer extends StatelessWidget {
                     .copyWith(color: Colors.grey),
               ),
               Text(
-                'By Divyam Joshi',
+                'By Apurv Jha',
                 style: Theme.of(context)
                     .textTheme
                     .bodyText1!

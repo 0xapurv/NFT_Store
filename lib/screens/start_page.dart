@@ -45,17 +45,9 @@ class _LoginPageState extends State<LoginPage> {
             Positioned.fill(
               child: Container(
                 decoration: BoxDecoration(
-                  // Box decoration takes a gradient
-                  gradient: LinearGradient(
-                    // Where the linear gradient begins and ends
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    // Add one stop for each color. Stops should increase from 0 to 1
-                    stops: [0.0, 1.0],
-                    colors: [
-                      Colors.grey.shade900,
-                      Colors.grey.shade800
-                    ],
+                  image: DecorationImage(
+                    image: AssetImage("assets/icons/69M_NFT.jpg"),
+                    fit: BoxFit.fitHeight,
                   ),
                 ),
               ),
@@ -64,72 +56,111 @@ class _LoginPageState extends State<LoginPage> {
               child: SingleChildScrollView(
                 padding: EdgeInsets.only(
                     left: 20.0, right: 20.0, top: devicePadding.top + 50.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                        height: 200,
-                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                        child: FlareActor(
-                          "assets/Teddy.flr",
-                          shouldClip: false,
-                          alignment: Alignment.bottomCenter,
-                          fit: BoxFit.contain,
-                          controller: _bear_log_inController,
-                        )),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(25.0),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(30.0),
-                        child: Form(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              TrackingTextInput(
-                                label: "Email",
-                                hint: "What's your email address?",
-                                onCaretMoved: (Offset? caret) {
-                                  _bear_log_inController.lookAt(caret);
-                                },
-                              ),
-                              TrackingTextInput(
-                                label: "Password",
-                                hint: "I'm not watching",
-                                isObscured: true,
-                                onCaretMoved: (Offset? caret) {
-                                  _bear_log_inController.coverEyes(caret != null);
-                                  _bear_log_inController.lookAt(null);
-                                },
-                                onTextChanged: (String value) {
-                                  _bear_log_inController.setPassword(value);
-                                },
-                              ),
-                              SigninButton(
-                                child: Text("Sign In",
-                                    style: TextStyle(
-                                        fontFamily: "RobotoMedium",
-                                        fontSize: 16,
-                                        color: Colors.white)),
-                                onPressed: () {
-                                  _bear_log_inController.submitPassword();
-                                  Navigator.of(context).pushReplacementNamed(RouteGenerator.homePage);
-                                },
-                              )
-                            ],
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(top:
+                    Radius.circular(25.0),
+                    ),
+                  ),
+
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+
+                          height: 200,
+                          padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                          child: FlareActor(
+                            "assets/Teddy.flr",
+                            shouldClip: false,
+                            alignment: Alignment.bottomCenter,
+                            fit: BoxFit.contain,
+                            controller: _bear_log_inController,
+                          )),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Form(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                TrackingTextInput(
+                                  label: "Email",
+                                  hint: "What's your email address?",
+                                  onCaretMoved: (Offset? caret) {
+                                    _bear_log_inController.lookAt(caret);
+                                  },
+                                ),
+                                TrackingTextInput(
+                                  label: "Password",
+                                  hint: "I'm not watching",
+                                  isObscured: true,
+                                  onCaretMoved: (Offset? caret) {
+                                    _bear_log_inController.coverEyes(caret != null);
+                                    _bear_log_inController.lookAt(null);
+                                  },
+                                  onTextChanged: (String value) {
+                                    _bear_log_inController.setPassword(value);
+                                  },
+                                ),
+                                SigninButton(
+                                  child: Text("Sign In",
+                                      style: TextStyle(
+                                          fontFamily: "RobotoMedium",
+                                          fontSize: 16,
+                                          color: Colors.white)),
+                                  onPressed: () {
+                                    _bear_log_inController.submitPassword();
+                                    Navigator.of(context).pushReplacementNamed(RouteGenerator.homePage);
+                                  },
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
+            ),
+            Positioned(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                          borderRadius: BorderRadius.circular(4),
+                          image: DecorationImage(
+                            image: AssetImage("assets/icons/69M_NFT.jpg"),
+                            fit: BoxFit.cover,
+                          )
+                      ),
+                    )
+                  ],
+                )
+            ),
+            Positioned.fill(
+              bottom: 50,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          image: DecorationImage(
+                            image: AssetImage("assets/icons/69M_NFT.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                      ),
+                    )
+                  ],
+                )
             ),
           ],
         ),
