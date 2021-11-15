@@ -13,7 +13,7 @@ class BalanceCard extends StatelessWidget {
       onTap: onItemPressed,
       child: Container(
         width: MediaQuery.of(context).size.width * .70,
-        height: 155,
+        height: 165,
         padding: EdgeInsets.all(12),
        // margin: EdgeInsets.symmetric(horizontal: 32),
         decoration: BoxDecoration(

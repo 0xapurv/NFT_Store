@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/animations/letter_spacing.dart';
+import 'package:nft_marketplace/routes.dart';
 import 'package:nft_marketplace/screens/balance.dart';
 import 'dart:ui' as ui;
 
@@ -39,12 +40,17 @@ class GreetingWidget extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
-                  Text(
-                    'NFT Marketplace',
-                    style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight: FontWeight.bold,
-                        foreground: Paint()..shader = linearGradient),
+                  InkWell(
+                    onTap: (){
+                      Navigator.of(context).pushReplacementNamed(RouteGenerator.startPage);
+                    },
+                    child: Text(
+                      'NFT Store',
+                      style: TextStyle(
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold,
+                          foreground: Paint()..shader = linearGradient),
+                    ),
                   ),
                 SizedBox(width: 10,),
 
@@ -83,7 +89,7 @@ class GreetingWidget extends StatelessWidget {
               const Center(
                 child: Padding(
                   padding: EdgeInsets.all(2.0),
-                  child: SpaceLetter(name: 'Apurv',fontsize: 14,width: 200,height: 30,
+                  child: SpaceLetter(name: 'Apurv',fontsize: 12,width: 200,height: 30,
                   opacity: 0.4,iconsize: 20,),
                 ),
               ),

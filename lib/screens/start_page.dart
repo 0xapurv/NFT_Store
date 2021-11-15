@@ -133,7 +133,6 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: Colors.red,
                           borderRadius: BorderRadius.circular(4),
                           image: DecorationImage(
                             image: AssetImage("assets/icons/69M_NFT.jpg"),
