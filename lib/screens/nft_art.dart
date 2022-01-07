@@ -82,8 +82,7 @@ class NftArtList extends StatelessWidget {
                   );
                  // Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailPage(image: nftModel.nftImage,)));
                 },
-                child: Hero(
-                  tag: "haaa",
+                child: Container(
                   child: Container(
 
                     height: 350,

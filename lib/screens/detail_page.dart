@@ -55,8 +55,7 @@ class _DetailPageState extends State<DetailPage> {
                     height: 400,
                     width: MediaQuery.of(context).size.width,
                    // color: lightening_yellow,
-                    child:Hero(
-                      tag:"haaa",
+                    child:Container(
                       child: Image.network(widget.image!,
                       fit: BoxFit.cover,),
                     ),
@@ -64,8 +63,8 @@ class _DetailPageState extends State<DetailPage> {
                  height: 400,
                  width: MediaQuery.of(context).size.width,
                  // color: lightening_yellow,
-                 child:Hero(
-                   tag:"haaa",
+                 child:Container(
+                  // tag:"haaa2",
                    child:NftVideoPlayer(url: widget.videourl,),
                  ),
                ),
